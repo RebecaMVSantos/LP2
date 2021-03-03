@@ -11,7 +11,6 @@ public class Hello2DApp {
 
 class Hello2DFrame extends JFrame {
     public Hello2DFrame () {
-	 //inseri a modificação da cor da tela de fundo
         this.getContentPane().setBackground(Color.RED);    
         this.setVisible(true);
         this.addWindowListener (
@@ -28,11 +27,8 @@ class Hello2DFrame extends JFrame {
     public void paint (Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-	    //quadrado preto
-	    g2d.fillRect(350, 350, 400, 400);
-	    // circulo branco
-	    g2d.setColor(Color.white);
-	    g2d.fillOval(370, 370, 360, 360);
-
+	   g2d.fillRect(350, 350, 400, 400);
+	   g2d.setColor(Color.white);
+	   g2d.fillOval(370, 370, 360, 360);
     }
 }
