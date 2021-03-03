@@ -11,6 +11,8 @@ public class Hello2DApp {
 
 class Hello2DFrame extends JFrame {
     public Hello2DFrame () {
+        this.getContentPane().setBackground(Color.RED);    
+        this.setVisible(true);
         this.addWindowListener (
             new WindowAdapter() {
                 public void windowClosing (WindowEvent e) {
@@ -25,10 +27,9 @@ class Hello2DFrame extends JFrame {
     public void paint (Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setPaint(Color.blue);
-        int w = getWidth();
-        int h = getHeight();
-        g2d.drawLine(0,0, w,h);
-        g2d.drawLine(0,h, w,0);
+	    g2d.fillRect(350, 350, 400, 400);
+	    g2d.setColor(Color.white);
+	    g2d.fillOval(370, 370, 360, 360);
+
     }
 }
